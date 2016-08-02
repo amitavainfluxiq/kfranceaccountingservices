@@ -1,0 +1,77 @@
+@font-face {
+	font-family:'PTSans';
+	src: url('../fonts/PTSans.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+body {padding:0;margin:0;background:#ffffff;	overflow-x:hidden;font-family:Arial, Helvetica, sans-serif;}
+* {padding:0;margin:0;text-decoration:none;	list-style:none;}
+p{ margin:0; padding:0;}
+a {text-decoration:none; cursor: pointer;}
+a:hover {text-decoration:none;outline:none; cursor: pointer;}
+a:visit {text-decoration:none;outline:none; cursor: pointer;}
+a:focus {text-decoration:none;outline:none; cursor: pointer;}
+.clear {clear:both;height:0px;}
+
+
+.container-fluid{ margin-left:0px; margin-right:0px; padding-left:0px; padding-right:0px;  }
+.container{padding-left:0px; padding-right:0px;}
+.row{ margin-left:0px; margin-right:0px; padding-left:0px; padding-right:0px;}
+*.col-{margin-left:0px; margin-right:0px; padding-left:0px; padding-right:0px;}
+
+/*-------Headerpart-----*/
+ /*-------TopHeader-----*/
+.topheader{width: 100%; background: #019acf; padding-top: 15px; padding-bottom: 15px;}
+
+.location{color:#fff; font-family: Arial; font-style: normal; font-size: 14px; text-transform: uppercase;}
+.location img{display: inline-block; float: left;}
+.location p{display: inline-block; float: left; margin-left: 10px;}
+
+.call{color:#fff; font-family: Arial; font-style: normal; font-size: 14px;}
+.call img{display: inline-block; float: left;}
+.call p{display: inline-block; float: left; margin-left: 10px;}
+
+.email{color:#fff; font-family: Arial; font-style: normal; font-size: 14px;}
+.email img{display: inline-block; float: left;}
+.email p{display: inline-block; float: left; margin-left: 10px;}
+.email a{color:#fff;}
+.email a:hover{color:#e65108;}
+
+.sociallinks{color:#fff; font-family: Arial; font-style: normal; font-size: 14px;}
+.sociallinks a{display: inline-block; float: left;}
+
+/*-------End TopHeader-----*/
+
+/*-------TopMenu-----*/
+.topblock{ width: 100%; background-color: rgba(255, 255, 255, 0.5); margin-top: 24px; margin-bottom: 24px;  }
+.topmenu{ width:100%; padding:0; float:right; margin: 0px; background: #fff;}
+.topmenu .navbar{ margin: 0px!important; padding: 0px!important; background:none; border: none; height: auto!important; line-height: inherit!important; min-height: inherit;}
+.topmenu .navbar-collapse{ margin: 0px; padding: 0px;}
+.topmenu  ul li{ padding:0px; margin: 0px;  background:none;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background:none;  }
+.topmenu  ul li a{ padding:8px 30px 10px 30px;  font-size:16px; color:#606061!important; font-family: 'PTSans'; line-height:inherit; display:block!important; }
+.topmenu  ul li a:hover{ color: #e65108!important; }
+.topmenu .active a{color: #e65108!important; }
+.responsivemenu{ display:none;}
+/*-------End TopMenu-----*/
+
+
+.footerblock{ background: #f0f0f0; padding: 40px 0; height: auto;}
+.footermenu{ padding: 0; width: 770px; float: left;}
+.footermenu ul{ margin: 0; padding: 0;}
+.footermenu ul li{ float: left; position:relative;}
+.footermenu a{ font-family: 'PTSans'; font-size:16px; color:#606061!important; text-transform: capitalize; margin-right: 55px;  }
+.footermenu ul li a{  color:#606061!important;}
+.footermenu ul li a:hover{  color:#ff0d32!important;}
+.footermenu .active a{  color:#ff0d32!important;}
+.footermenu a:hover,.footermenu a.active{ color:#ff0d32;}
+.footermenu .dropdown-menu{ top: 20px; background: #bbbbbb; padding-top: 10px; border-radius: 0 0 4px 4px ; border: solid 1px #2e3133; box-shadow: none;}
+.footermenu .dropdown-menu li{ display: block; width: 100%; text-align: center; border-radius: 0px!important; }
+.footermenu .dropdown-menu li a{ display: block; width: 100%; text-align: center; color: #000000!important;}
+.footermenu .dropdown-menu li a:hover{ border-radius: 0px!important; background: none!important; color: #ba0202!important;}
+.footersociallink  a:hover{background-position:left top;}
+.footercopyright{ padding:0; width: 260px; float: right; text-align: right; color:#000;  font-family:'OpenSans-Semibold';  font-size:14px; font-weight: bold;}
+
