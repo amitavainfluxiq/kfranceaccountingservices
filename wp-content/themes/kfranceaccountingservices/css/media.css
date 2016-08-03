@@ -3,7 +3,18 @@
 }
 
 @media(max-width:1680px) {
+    .homeblock3 p {
+        margin-top: 1%;
+        max-width: 625px;
+    }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 50%;
+    }
+
+
 }
+
 
 
 @media(max-width:1660px) {
@@ -25,8 +36,21 @@
 
 
 @media(max-width:1400px) {
+    .bannercontent {
+        top: 35%;
+    }
+    .mainbanner .imgbanner img {
+        margin-left: -200px;
+    }
+    .homeblock3 {
+        background-position: -124px 32px;
+    }
+    .homeblock3 p {
+        margin-top: 1%;
+        max-width: 580px;
+    }
 
-   }
+}
 
 
 @media(max-width:1360px) {
@@ -40,7 +64,14 @@
 
 @media(max-width:1280px) {
 
+    .homeblock3 p {
+        margin-top: 1%;
+        max-width: 600px;
+    }
 
+    .homeblock3 {
+        background-position: -250px 10px;
+    }
 }
 
 
@@ -63,29 +94,35 @@
 
 
 @media(max-width:1199px) {
-    .location{margin-bottom: 10px;}
+    .location{margin-bottom: 15px; margin-top: 0px;}
     .location img{display: block; float: none; text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 5px;}
-    .location p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 10px;}
+    .location p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 0px;}
 
-    .call{margin-bottom: 10px;}
+    .call{margin-bottom: 15px; margin-top: 0px;}
     .call img{display: block; float: none; text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 5px;}
-    .call p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 10px;}
+    .call p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 0px;}
 
-    .email{margin-bottom: 10px;}
+    .email{margin-bottom: 15px; margin-top: 0px;}
     .email img{display: block; float: none; text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 5px;}
-    .email p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 10px;}
+    .email p{display: block; float: none;  text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 0px;}
+    .sociallinks {margin-left: auto; margin-right: auto; display: block; float: none; text-align: center; max-width: 172px;}
 
-    .sociallinks {margin-left: auto; margin-right: auto; display: block; float: none; text-align: center; max-width: 158px;}
-    
     .topmenu{ width:100%; padding:0; float:none; margin: 0px; background: #fff;}
     .topmenu .navbar-header {float: none;}
     .topmenu .navbar-toggle {display: block; border:none!important}
     .topmenu .navbar-collapse.collapse {display: none!important;border:none!important}
-    .topmenu  .navbar-nav {float: none!important; border:none!important; width: auto; margin: 0!important; padding: 0!important;}
+    .topmenu .navbar-nav {
+        float: none !important;
+        border: none !important;
+        width: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #f5f5f5;
+    }
     .topmenu .navbar-nav>li {float: none;}
     .topmenu .collapse.in {display: block !important;}
     .navbar-collapse{ padding:0;  }
-    .navbar-header{ border-bottom:solid 1px #fff!important;}
+    .navbar-header{ border-bottom:solid 1px #f3f3f3 !important;}
     .topmenu  ul li{ border-bottom:solid 1px #fff; padding:0 0; width: auto; }
     .topmenu  ul li a{ display:block; padding:5px 0!important; text-align: center; font-size: 22px; }
     .topmenu  ul li a:hover{color:#e65108!important;}
@@ -95,10 +132,11 @@
     .responsivemenu { display:inline-block; font-size:22px; color:#e65108;font-weight:bold; padding:8px 0 0 15px; float:left;}
     .navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
 
-    .topblock{ width: 100%; background: #e65108; height:auto; color:#fff; margin-top:10px; margin-bottom: 10px; }
+    .topblock{ width: 100%; height:auto;padding-top: 0px; padding-bottom: 0px;}
     .topblock .navbar-toggle{background: #019acf!important;}
     .topblock .navbar-toggle:hover{ background: #019acf!important; }
     .topblock .navbar-toggle:focus{ background: #019acf!important; }
+    .topblock .container {width: 100%;}
 
     .footerblock{ padding: 0 0 30px 0;}
     .footerblock .container{ width: 100%;}
@@ -106,22 +144,132 @@
     .footermenu li{ width: 100%; border-bottom: solid 1px #ccc; padding: 10px 0;}
     .footermenu a{ margin: 0px;}
 
-    .footercopyright{ width: 100%; float: none; text-align: center; padding-top: 30px;}
+    .footercopyright {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
     .footersociallink {
-        display: block;
         float: none;
         margin-left: auto;
         margin-right: auto;
-        padding: 0;
+    }
+    .footermenu {
+        max-width: 100%;
+    }
+    .mainbanner .imgbanner {
+        margin-top: 0px;
+    }
+    .bannercontent {
+        position: relative;
+        top: 43%;
+        left: 0px;
+        width: 100%;
+        padding: 30px 15px 45px;
+        height: auto;
+        float: left;
+    }
+    .bannercontent h2{margin-top: 0px; margin-bottom: 0px;text-align: center;}
+    .bannercontent p {text-align: center;}
+    .bannerbutton{margin-left: auto; margin-right: auto; max-width: 460px;}
+    .mainbanner .imgbanner img {
+        margin-left: -374px;
+    }
+
+
+    .singleservice:nth-child(1) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(2) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(3) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(4) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(5) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(6) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(7) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(8) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(9) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(10) {border-bottom:0px solid #b2b3b3; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(11) {border-bottom:0px solid #b2b3b3; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+    .singleservice:nth-child(12) {border-bottom:0px solid #b2b3b3; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
+
+    .singleservice p {
+        padding-top: 8px;
+    }
+    .singleservice {
+        padding: 10px 15px;
+    }
+    .footersociallink {
+        float: none;
+        margin-right: auto;
+        max-width: 222px;
+        margin-left: auto;
+    }
+    .footersociallink span {
+        display: block;
+        float: none;
+        margin-right: auto;
         text-align: center;
-        width: 34%;
+        margin-left: auto;
+    }
+    .singleservice p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .homeblock3{background: url(../images/homeblock3bg.jpg) no-repeat #fff; background-position: left 32px; min-height: inherit; width:100%; position: relative; padding-top: 536px; width:100%;}
+    .homeblock3content{position: inherit; top:0%;margin-left: 0%; width:100%; }
+    .homeblock3content { text-align: center;  padding-top: 20px;}
+    .homeblock3 h2 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        padding-top: 15px;
+    }
+    .homeblock3 p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        max-width: 90%;
+    }
+}
+
+@media(max-width:1024px) {
+    .mainbanner .imgbanner img {
+        margin-left: -50px;
     }
 
 }
 
 
 @media(max-width:991px) {
+    .mainbanner .imgbanner img {
+        margin-left: -110px;
+    }
+    .homeblock1 .aboutcontent img {
+        float: none !important;;
+        margin-right: auto !important;
+        margin-bottom: 30px;
+        display: block !important;
+        text-align: center;
+        margin-left: auto !important;
+    }
+    .homeblock1 .aboutcontent span {
+        float: none !important;;
+        margin-right: auto !important;
+        display: block !important;
+        text-align: center;
+        margin-left: auto !important;
+    }
+    .homeblock1 p {
+        float: none !important;;
+        margin-right: auto !important;
+        display: block !important;
+        text-align: center;
+        margin-left: auto !important;
+        max-width: 90%;
+    }
 
 
 }
@@ -133,8 +281,6 @@
 
 
 @media(max-width:960px) {
-
-
 }
 
 @media(max-width:800px) {
@@ -144,21 +290,45 @@
 
 @media(max-width:767px) {
 
+    .mainbanner .imgbanner img {
+        margin-left: -310px;
+    }
+
 
 }
 
 @media(max-width:700px) {
 
-
 }
 
+@media(max-width:560px) {
+
+    .bannerbutton a{margin-bottom: 10px;}
+    .bannerbutton a:first-child {
+        width: 100%;
+    }
+    .bannerbutton a:last-child {
+        width: 100%;
+    }
+}
 
 
 @media(max-width:480px) {
-
+    .mainbanner .imgbanner img {
+        margin-left: -293px;
+    }
+    .homeblock3 {
+        background-position: -210px 32px;
+    }
 }
 
 @media(max-width:360px) {
+    .mainbanner .imgbanner img {
+        margin-left: -227px;
+    }
+    .homeblock3 {
+        background-position: -296px 32px;
+    }
 
 }
 
