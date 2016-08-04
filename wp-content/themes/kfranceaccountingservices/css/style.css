@@ -111,7 +111,12 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 
 /*-------Banner-----*/
 .mainbanner .imgbanner{margin-top: -89px; z-index: -1; position: relative;}
+.mainbanner .imgbanner {
+	width: 100%;
+	overflow: hidden;
+}
 .mainbanner .imgbanner img{overflow: hidden;width: auto;}
+
 
 .bannercontent{
 	position: absolute;
@@ -155,33 +160,49 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 .bannerbutton a:first-child{background-color: #171717 !important;}
 .bannerbutton a:last-child{background-color: #019acf !important;margin-right: 0px;}
 /*-------end Banner-----*/
-
-.home_wrapper {padding: 50px 0 0;border-top:1px solid #e8e7e7;}
-.homeblock1{background-color: #fff; width:100%; height: auto;}
+.homelogo .banner_logo{display: none;}
+.home_wrapper {padding: 39px 0 0;border-top:1px solid #e8e7e7;}
+.homeblock1{background-color: #fff; width:100%; height: auto;padding-bottom: 50px;}
 .homeblock1 h2 {margin: 0; padding: 0 0 24px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #000000; text-align: center; text-transform: uppercase;}
 .homeblock1 .headingborder{width:75px; background-color:#019acf; height: 3px; margin-right: auto; margin-left: auto; text-align: center; float: none;margin-bottom: 30px;}
 .homeblock1 .aboutcontent img{float:left; margin-right: 30px; margin-bottom: 20px; }
-.homeblock1 p {font-family: 'PTSans'; margin: 0; padding: 0 0 24px 0; font-size: 18px; line-height: 26px; color: #323232;}
+.homeblock1 p {font-family: 'PTSans'; margin: 0; padding: 0 0 0px 0; font-size: 18px; line-height: 26px; color: #323232;}
 .homeblock1 .aboutcontent span{color: #019acf; font-family: 'PTSansBold';line-height: 26px;}
 
 
-.homeblock2{background-color: #f2f2f2; width:100%; height: auto; border-top:1px solid #e8e7e7;padding: 50px 0;}
+.homeblock2{background-color: #f2f2f2; width:100%; height: auto; border-top:1px solid #e8e7e7;padding: 39px 0;}
 .homeblock2 h2 {margin: 0; padding: 0 0 24px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #000000; text-align: center; text-transform: uppercase;}
 .homeblock2 .headingborder{width:75px; background-color:#019acf; height: 3px; margin-right: auto; margin-left: auto; text-align: center; float: none;margin-bottom: 30px;}
 
-.singleservice{border:1px solid #b2b3b3; padding: 20px;}
-.singleservice:nth-child(1){border-left:0px solid #b2b3b3;border-bottom:0px solid #b2b3b3; border-top:0px solid #b2b3b3; border-right:0px solid #b2b3b3; background:url(../images/line1.png) no-repeat right bottom, url(../images/linebottom1.png) no-repeat bottom right;}
+.singleservice{border:1px solid #b2b3b3; padding: 20px; height: 210px;}
+.singleservice:nth-child(1){border-left:0px solid #b2b3b3;border-bottom:0px solid #b2b3b3; border-top:0px solid #b2b3b3; border-right:0px solid #b2b3b3; background:url(../images/linetop.png) no-repeat right bottom, url(../images/lineleft.png) no-repeat bottom right;margin-top: 0px;}
 .singleservice:nth-child(2){border-top:0px solid #b2b3b3;border-left:0px solid #b2b3b3;border-right:0px solid #b2b3b3;}
-.singleservice:nth-child(3){border-right:0px solid #b2b3b3; border-top:0px solid #b2b3b3;border-left:0px solid #b2b3b3; background:url(../images/line1.png) no-repeat left bottom, url(../images/linebottomright1.png) no-repeat bottom left;}
-.singleservice:nth-child(4){border-left:0px solid #b2b3b3; border-top:0px; border-bottom:0px; background: url(../images/linebottom1.png) no-repeat bottom; border-bottom:0px;}
-.singleservice:nth-child(5){border-left:0px solid #b2b3b3; border-top:0px; border-right:1px solid #b2b3b3;}
-.singleservice:nth-child(6){border-right:0px solid #b2b3b3; border-top:0px solid #b2b3b3; }
-.singleservice:nth-child(7){border-left:0px solid #b2b3b3;  border-top:0px; background: url(../images/linebottom1.png) no-repeat bottom; border-bottom:0px;}
-.singleservice:nth-child(8){border-right:0px solid #b2b3b3;}
-.singleservice:nth-child(9){border-right:0px solid #b2b3b3;}
-.singleservice:nth-child(10){border-left:0px solid #b2b3b3; border-bottom:0px solid #b2b3b3;}
-.singleservice:nth-child(11){border-bottom:0px solid #b2b3b3;}
-.singleservice:nth-child(12){border-right:0px solid #b2b3b3; border-bottom:0px solid #b2b3b3;}
+.singleservice:nth-child(3) {
+	background: url("../images/linetop.png") no-repeat scroll left bottom, rgba(0, 0, 0, 0) url("../images/lineright.png") no-repeat scroll left bottom;
+	border-color: #b2b3b3 #b2b3b3 -moz-use-text-color;
+	border-style: solid solid none;
+	border-width: 0;
+	margin-top: 0px;
+}
+.singleservice:nth-child(4){border-left:0px solid #b2b3b3; border-top:0px; border-bottom:0px; background: url(../images/lineleft.png) no-repeat bottom; border-bottom:0px; margin-top: 0px;}
+.singleservice:nth-child(5){border-left: 0 solid #b2b3b3;	border-right: 0 solid #b2b3b3;
+	border-top: 0 none;}
+.singleservice:nth-child(6){background: rgba(0, 0, 0, 0) url("../images/lineright.png") no-repeat scroll left bottom;
+	border-bottom: 0 none;
+	border-right: 0 solid #b2b3b3;
+	border-top: 0 solid #b2b3b3;
+	margin-top: 0px;}
+.singleservice:nth-child(7){border-left:0px solid #b2b3b3;  border-top:0px; background: url(../images/lineleft.png) no-repeat bottom; border-bottom:0px;margin-top: 0px;}
+.singleservice:nth-child(8){border-right: 0 solid #b2b3b3;
+	border-top: 0 none;border-left: 0 none;}
+.singleservice:nth-child(9){background: rgba(0, 0, 0, 0) url("../images/lineright.png") no-repeat scroll left bottom;
+	border-bottom: 0 none;
+	border-right: 0 solid #b2b3b3;
+	border-top: 0 solid #b2b3b3;
+	margin-top: 0px;}
+.singleservice:nth-child(10){border-left:0px solid #b2b3b3; border-bottom:0px solid #b2b3b3;border-top: 0 none; background:url(../images/linebottom.png) no-repeat right top;border-right: 0px;}
+.singleservice:nth-child(11){border-bottom:0px solid #b2b3b3;border-top: 0 none;border-left: 0 none; border-right:0px;}
+.singleservice:nth-child(12){border-right:0px solid #b2b3b3; border-bottom:0px solid #b2b3b3;border-top: 0 none; background:url(../images/linebottom.png) no-repeat left top; border-left: 0px;}
 
 .singleservice .serviceicon{width:72px; height: 72px; border-radius: 100%; margin-left: auto; margin-right: auto;}
 .singleservice:nth-child(1) .serviceicon{background-color: #ffa800; padding: 16px 16px;}
@@ -215,9 +236,9 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 
 .homeblock3{background: url(../images/homeblock3bg.jpg) no-repeat #fff; background-position: left 32px; min-height: 567px; width:100%; position: relative;}
 .homeblock3content {
-    position: absolute;
-    margin-left: 42%;
-    padding-top: 8%;
+	position: absolute;
+	margin-left: 35%;
+	padding-top: 6%;
 }
 
 .homeblock3 h2{text-transform: uppercase;
@@ -234,14 +255,60 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
     font-family: 'PTSans';
     font-size: 18px;
     line-height: 26px;
-    margin-left: 9%;
+    margin-left: 12%;
     margin-top: 1%;
 }
 
+.homeblock3 .bannerbutton{border-radius: 6px;
+	color: #fff;
+	display: inline-block;
+	float: left;
+	font-family: "PTSansBold";
+	font-size: 18px;
+	margin-right: 18px;
+	padding-bottom: 18px;
+	padding-top: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 212px;
+	letter-spacing: 2px;
+	background-color: #019acf !important;
+	margin-top: 30px;
+}
+.homeblock3 .bannerbutton br{display: none;}
+.homeblock3content p span{float: left; margin-right:34px;margin-left: 9%;color: #323232;font-family: 'PTSans';font-size: 36px;	line-height: 36px;
+	margin-top: 38px;}
 
+.homeblock4 {
+	background:url('../images/homeblock4bg.jpg');
+	position: relative;
+	min-height:875px;
+	width:auto;
+	background-size: cover;
+}
+.homeblock4 .bannerbutton{border-radius: 6px;
+	color: #fff;
+	display: inline-block;
+	float: left;
+	font-family: "PTSansBold";
+	font-size: 18px;
+	margin-right: 18px;
+	padding-bottom: 18px;
+	padding-top: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 212px;
+	letter-spacing: 2px;
+	background-color: #171717 !important;
+}
+.homeblock4 .bannerbutton br{display: none;}
 
-.homeblock4{background: url(../images/homeblock4bg.jpg) no-repeat; min-height: 875px; width:100%; position: relative;}
-.homeblock4overlay {
+.hometestimonialbannerbutton {
+	padding: 10px 0px;
+	max-width: 100%;
+}
+
+.overlaybluebg {
 	background-color: rgba(41, 158, 212, 0.7);
 	position: absolute;
 	top: 0;
@@ -249,34 +316,51 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 	width: 100%;
 	height: 100%;
 }
-
-.homeblock4content {
+.hometestimonialblock .carousel-indicators {
 	position: absolute;
-	margin-left: 0%;
-	padding-top: 8%;
-}
-.homeblock4 h2 {margin: 0; padding: 50px 0 79px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #d8ff00; text-align: center; text-transform: uppercase;}
-
-.carousel-indicators {
-	position: absolute;
-	bottom: 10px;
-	left: 100%;
+	bottom: 45%;
+	right: 0%;
 	z-index: 15;
-	width: 78%;
+	width: 2%;
 	padding-left: 0;
-	margin-left: 20%;
+	margin-left: -3%;
 	text-align: center;
 	list-style: none;
+	left: inherit;
 }
-.carousel-indicators li {
+
+.hometestimonialblock .carousel-indicators li {
 	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 10px 0px;
+	text-indent: -999px;
+	cursor: pointer;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	background-color: #ff581c;
 }
 
-#mytesimonialCarousel .itemcontent{ border-bottom: 1px solid #fff; padding: 10px 0px;}
+.hometestimonialblock .carousel-indicators .active {
+	background-color: #fff;
+}
 
-#mytesimonialCarousel .itemcontent span{font-family: 'PTSansBold';  font-size: 36px; color: #fff;}
-#mytesimonialCarousel .itemcontent h4{font-family: 'PTSansBold';  font-size: 36px; color: #fff;}
-#mytesimonialCarousel .itemcontent p{font-family: 'PTSans';  font-size: 18px; color: #fff;}
+.homeblock4 h2 {margin: 0; padding: 39px 0 0px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #d8ff00; text-align: center; text-transform: uppercase;}
+
+
+.hometestimonialblockcontent{    border-bottom: 1px solid #fff;
+	padding: 45px 0px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;}
+
+.hometestimonialblockcontent h4{font-family: 'PTSansBold';  font-size: 36px; color: #fff;margin: 0;	padding: 0; margin-bottom: 45px;}
+.hometestimonialblockcontent span h4{font-family: 'PTSansBold';  font-size: 36px; color: #fff;margin: 0; padding: 0;margin-bottom: 45px;}
+.hometestimonialblockcontent span{font-family: 'PTSans';  font-size: 18px; color: #fff;}
+.hometestimonialblockcontent span br{display: none;}
+
+
+
 
 .homeblock5{padding: 50px 0px;}
 .homeblock5content{max-width: 1120px; margin-left: auto; margin-right: auto;}

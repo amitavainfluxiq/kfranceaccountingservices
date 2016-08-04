@@ -1,7 +1,13 @@
 $(document).ready(function(){
 
 
-
+$(".blogdes h3").each(function(i){
+    len=$(this).text().length;
+    if(len>360)
+    {
+      $(this).text($(this).text().substr(0,360)+' ... ');
+    }
+  });
 
 
 

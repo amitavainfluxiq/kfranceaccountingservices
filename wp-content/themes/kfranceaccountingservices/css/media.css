@@ -10,6 +10,10 @@
     .homeblock3content {
         position: absolute;
         margin-left: 50%;
+        padding-top: 3%;
+    }
+    .homeblock3content p span {
+        margin-left: 0%;
     }
 
 
@@ -72,6 +76,10 @@
     .homeblock3 {
         background-position: -250px 10px;
     }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 35%;
+    }
 }
 
 
@@ -124,7 +132,7 @@
     .navbar-collapse{ padding:0;  }
     .navbar-header{ border-bottom:solid 1px #f3f3f3 !important;}
     .topmenu  ul li{ border-bottom:solid 1px #fff; padding:0 0; width: auto; }
-    .topmenu  ul li a{ display:block; padding:5px 0!important; text-align: center; font-size: 22px; }
+    .topmenu  ul li a{ display:block; padding:10px 0!important; text-align: center; font-size: 22px;line-height: 32px; }
     .topmenu  ul li a:hover{color:#e65108!important;}
     .topmenu .active a{  color:#e65108!important;}
     .topmenu  ul li:last-child{ border:none;}
@@ -168,18 +176,46 @@
         top: 43%;
         left: 0px;
         width: 100%;
-        padding: 30px 15px 45px;
+        padding: 12px 0px;
         height: auto;
         float: left;
     }
     .bannercontent h2{margin-top: 0px; margin-bottom: 0px;text-align: center;}
-    .bannercontent p {text-align: center;}
+    .bannercontent p {text-align: center; margin-bottom: 20px; margin-top: 11px; width: 90%; margin-left: auto; margin-right: auto;}
     .bannerbutton{margin-left: auto; margin-right: auto; max-width: 460px;}
     .mainbanner .imgbanner img {
         margin-left: -374px;
     }
+    .bannerbutton a {
+        margin-bottom: 20px;
+    }
+    .home_wrapper {
+        padding: 10px 0 0;
+    }
+    .homeblock1{padding-bottom: 20px;}
+    .homeblock1 h2 {
+        margin: 0;
+        padding: 10px 0 20px 0;
+    }
+    .homeblock1 .headingborder {
+        margin-bottom: 20px;
+    }
 
+    .homeblock1 .aboutcontent{padding: 0 0 20px 0;}
 
+    .homeblock1 p {
+        padding: 0 0 0px 0;
+    }
+    .homeblock2 {
+        padding: 10px 0;
+    }
+    .homeblock2 h2 {
+        padding: 10px 0 14px;
+    }
+    .homeblock3content p span {
+        margin-top: 20px;
+    }
+    .singleservice{height: auto;}
     .singleservice:nth-child(1) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
     .singleservice:nth-child(2) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
     .singleservice:nth-child(3) {border-bottom:0px solid #f5f5f5; width:100%; border-right:0px; border-left:0px; border-top:0px; background: transparent;}
@@ -233,6 +269,72 @@
         margin-top: 1%;
         max-width: 90%;
     }
+    .hometestimonialblockcontent {
+        border-bottom: 1px solid #fff;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        padding: 20px 0;
+    }
+    .hometestimonialblockcontent h4 {
+        font-family: 'PTSansBold';
+        font-size: 36px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .hometestimonialblockleft{width:100% !important; display: block; text-align: center;}
+    .hometestimonialblockright{width:100% !important; display: block; text-align: center;}
+    .hometestimonialblockcontent span h4 {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 26px;
+    }
+    .homeblock4 h2 {
+        padding: 20px 0 0;
+    }
+    .overlaybluebg {
+        position: relative;
+    }
+    .homeblock3 .bannerbutton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .homeblock4 {
+        height: auto;
+        position: relative;
+        width: auto;
+        min-height: inherit;
+    }
+    .hometestimonialblockcontent .container {
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .homeblock3 .bannerbutton {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .homeblock3content p span {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    .hometestimonialbannerbutton {
+        padding: 30px 0px;
+        max-width: 212px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hometestimonialbannerbutton .pull-right{float: none !important;}
+    .homeblock5 {
+        padding: 20px 0;
+    }
+    .homelogo .banner_logo{display: block;}
 }
 
 @media(max-width:1024px) {
@@ -240,10 +342,30 @@
         margin-left: -50px;
     }
 
+
+
+
 }
 
 
 @media(max-width:991px) {
+
+    .overlaybluebg {
+        background-color: rgba(41, 158, 212, 1);
+        height: 100%;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+    .homeblock4 {
+        background: none;
+    }
+    .hometestimonialblockcontent {
+        text-align: center;
+    }
+
+
     .mainbanner .imgbanner img {
         margin-left: -110px;
     }
@@ -270,7 +392,11 @@
         margin-left: auto !important;
         max-width: 90%;
     }
-
+    .homeblock5content {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
@@ -293,8 +419,16 @@
     .mainbanner .imgbanner img {
         margin-left: -310px;
     }
-
-
+    .hometestimonialblock .carousel-indicators {
+      width: 6%;
+    }
+    .hometestimonialblockcontent {
+        max-width: 80%;
+    }
+    .footersociallink span {
+        line-height: 15px;
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width:700px) {
@@ -305,10 +439,18 @@
 
     .bannerbutton a{margin-bottom: 10px;}
     .bannerbutton a:first-child {
-        width: 100%;
+        width: 212px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .bannerbutton a:last-child {
-        width: 100%;
+        width: 212px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
 
