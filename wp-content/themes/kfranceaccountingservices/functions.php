@@ -8,7 +8,7 @@
 
 add_filter('tiny_mce_before_init', 'myextensionTinyMCE' );
 
-
+// tiny mc editer
 
 function myextensionTinyMCE($init) {
     // Command separated string of extended elements
@@ -31,166 +31,18 @@ add_filter('tiny_mce_before_init', 'myextensionTinyMCE' );
 
 
 
-function wpb_postsbycategory() {
-// the query
-    $the_query = new WP_Query( array( 'category_name' => 'blog', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
-    $string='';
-// The Loop
-    if ( $the_query->have_posts() ) {
-        $string .= '<div class="postblog1 postsbycategorymain">';
-        while ( $the_query->have_posts() ) {
-
-            $the_query->the_post();
-            //var_dump( get_the_ID()); exit;
-
-            $metaval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_2_fieldID_1_numInSet_0']);
-            $postimg=(get_post_meta( intval($metaval[0]) )['_wp_attached_file'][0]);
-            if($postimg== NULL){
-                $postimg='http://ast.influxiq.com/wp-content/themes/pearlhealth/images/logo.png';
-
-            }
-            else $postimg="/wp-content/uploads/".$postimg;
-            //var_dump(get_post_meta( 424 ));
-
-            /*echo '<pre>';
-            print_r($postimg);
-            echo '</pre>';*/
-            $string .= '<ul class="postsbycategory widget_recent_entries">';
-            //$the_query->the_post();
-
-                // if no featured image is found
-                $string .= '
-                <li class="contentc"> <h2><div class="contentcimgwrapper"><img src='.$postimg.' /></div>
-                <div class="titleb"><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></div><div class="mapost_date">'.get_the_date().'</div>
-                ' . wp_trim_words(get_the_content(),150) .'</h2><div class="clear"></div></li>';
 
 
-            $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
-            <div class="bottomsharethis">
-            <span class="st_sharethis_large" displayText="ShareThis"></span>
-            <div class="mapost_link_sharethise" >
-                                 <span class="st_facebook_large" displayText="Facebook"></span>
-                                 <span class="st_twitter_large" displayText="Tweet"></span>
-                                 <span class="st_linkedin_large" displayText="LinkedIn"></span>
-                                 <span class="st_pinterest_large" displayText="Pinterest"></span>
-                                 <span class="st_email_large" displayText="Email"></span>
-                            </div>
-
-            </div>
-
-            ';
-            $string .= '</ul>';
-
-        }
-    } else {
-        // no posts found
-    }
-
-    $string .= '</div>';
-
-    return $string;
-
-    /* Restore original Post Data */
-    wp_reset_postdata();
-}
-// Add a shortcode
-add_shortcode('categoryposts', 'wpb_postsbycategory');
-
-// Enable shortcodes in text widgets
-add_filter('widget_text', 'do_shortcode');
 
 
-function my_widget_content_wrap($content) {
-    $content = '<div class="some-other-div">'.$content.'</div>';
-    return $content;
-}
-add_filter('widget_text', 'my_widget_content_wrap');
-
-
-function wpb_homeblogposts() {
-// the query
-    $the_query = new WP_Query( array( 'category_name' => 'blog', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
-    $string='';
-// The Loop
-    if ( $the_query->have_posts() ) {
-        $string .= '<div class="homepostblog1">';
-        while ( $the_query->have_posts() ) {
-
-            $the_query->the_post();
-            //var_dump( get_the_ID()); exit;
-
-            $metaval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_2_fieldID_1_numInSet_0']);
-            $postimg=(get_post_meta( intval($metaval[0]) )['_wp_attached_file'][0]);
-            if($postimg== NULL){
-                $postimg='http://ast.influxiq.com/wp-content/themes/pearlhealth/images/logo.png';
-
-            }
-            else $postimg="/wp-content/uploads/".$postimg;
-            //var_dump(get_post_meta( 424 ));
-
-            /*echo '<pre>';
-            print_r($postimg);
-            echo '</pre>';*/
-            //$string .= '<ul class="postsbycategory widget_recent_entries">';
-            //$the_query->the_post();
-
-            // if no featured image is found
-           /* $string .= '
-                <li class="contentc"> <h2><div class="contentcimgwrapper"><img src='.$postimg.' /></div>
-                <div class="titleb"><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></div>
-                ' . wp_trim_words(get_the_content(),100) .'</h2><div class="clear"></div></li>';*/
-            $string .='<div class="block2rightconbox">
-            <div class="blogimghome">
-<img class="block2rightcarimg" src="'.$postimg.'" /></div>
-<h2>'.wp_trim_words(get_the_title(),50).'</h2>
-<p><span class="homeblockdate">'.get_the_date().'</span></p>
-<p>' . wp_trim_words(get_the_content(),80) .'</p>
-<p><a class="homeblocklinksml" href="'.get_the_permalink().'">Read More</a></p>
-</div>';
-
-
-           /* $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
-            <div class="bottomsharethis">
-            <span class="st_sharethis_large" displayText="ShareThis"></span>
-            <div class="mapost_link_sharethise" >
-                                 <span class="st_facebook_large" displayText="Facebook"></span>
-                                 <span class="st_twitter_large" displayText="Tweet"></span>
-                                 <span class="st_linkedin_large" displayText="LinkedIn"></span>
-                                 <span class="st_pinterest_large" displayText="Pinterest"></span>
-                                 <span class="st_email_large" displayText="Email"></span>
-                            </div>
-            <div class="mapost_date">'.get_the_date().'</div>
-            </div>
-
-            ';*/
-            //$string .= '</ul>';
-
-        }
-    } else {
-        // no posts found
-    }
-
-    $string .= '</div>';
-
-    return $string;
-
-    /* Restore original Post Data */
-    wp_reset_postdata();
-}
-// Add a shortcode
-add_shortcode('categoryposts1', 'wpb_homeblogposts');
-
-// Enable shortcodes in text widgets
-add_filter('widget_text', 'do_shortcode');
-
-
+// create a new contentype in wp
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-    register_post_type( 'post',
+    register_post_type( 'testimonial',
         array(
             'labels' => array(
-                'name' => __( 'team' ),
-                'singular_name' => __( 'team' )
+                'name' => __( 'Testimonial' ),
+                'singular_name' => __( 'testimonial' )
             ),
             'public' => true,
             'has_archive' => true,
@@ -199,131 +51,102 @@ function create_post_type() {
 }
 
 
-// team page top slider
+add_action( 'init', 'create_post_blog' );
+function create_post_blog() {
+    register_post_type( 'blog',
+        array(
+            'labels' => array(
+                'name' => __( 'Blog' ),
+                'singular_name' => __( 'blog' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+}
 
 
-function wp_teamslider() {
+
+
+
+
+
+
+
+
+
+
+
+
+function wp_testimoniallist() {
 // the query
-    $the_query = new WP_Query( array( 'category_name' => 'team', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
+    $the_query = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
     $string='';
     $i=0;
 // The Loop
     if ( $the_query->have_posts() ) {
-        $string .= '<div class="team1block_wrapper">  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
-   <div class="carousel-inner" role="listbox">';
+        $string .= '';
         while ( $the_query->have_posts() ) {
 
             $the_query->the_post();
-            //var_dump( get_the_ID()); exit;
+            //var_dump( get_the_ID()); //exit;
 
-            $descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
+            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
             $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
             $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
+            $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
+            $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
+            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
+
+            //print_r($fb);
+
+
+//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+//            //print_r($pic);
+//            //print_r($postimg);
+//            if($postimg== NULL){
+//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
+//
+//            }
+//            else $postimg="/wp-content/uploads/".$postimg;
+
+
+
+            $testimonialdescription=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_4_numInSet_0']);
+            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_1_numInSet_0']);
+            //var_dump($pic);
             $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
-            //print_r($pic);
-            //print_r($postimg);
-            if($postimg== NULL){
-                $postimg='/wp-content/themes/pearlhealth/images/logo2.png';
+           //print_r($pic);
+           //print_r($postimg);
+           if($postimg== NULL){
+               $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
 
-            }
-            else $postimg="/wp-content/uploads/".$postimg;
-            //var_dump(get_post_meta( 424 ));
-
-            /*echo '<pre>';
-            print_r($postimg);
-            echo '</pre>';*/
-            //$string .= '<ul class="postsbycategory widget_recent_entries">';
-            //$the_query->the_post();
-
-            // if no featured image is found
-            /* $string .= '
-                 <li class="contentc"> <h2><div class="contentcimgwrapper"><img src='.$postimg.' /></div>
-                 <div class="titleb"><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></div>
-                 ' . wp_trim_words(get_the_content(),100) .'</h2><div class="clear"></div></li>';*/
-           /* $string .='<div class="block2rightconbox">
-            <div class="blogimghome">
-<img class="block2rightcarimg" src="'.$postimg.'" /></div>
-<h2>'.wp_trim_words(get_the_title(),50).'</h2>
-<p><span class="homeblockdate">'.get_the_date().'</span></p>
-<p>' . wp_trim_words(get_the_content(),80) .'</p>
-<p><a class="homeblocklinksml" href="'.get_the_permalink().'">Read More</a></p>
-</div>';*/
-
-            if($i==0){
-            $string.=' <div class="item active">
-     <div class="team_block1row">
-       <div class="team_block1_left">
-       <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; height:100%;">
-     <tr>
-    <td align="center" valign="middle">
-       <img src="'.$postimg.'" alt="teamimg1">
-       </td>
-  </tr>
-</table>
-
-       </div>
-
-         <div class="team_block1_right">
-          <h2>'. get_the_title() .'</h2>
-          <h3>'.$designation[0].'</h3>
-
-          <h4>'.$descval[0].'</h4>
+           }
+           else $postimg="/wp-content/uploads/".$postimg;
 
 
-
-         		<a class="team_block1btn" href="/contact">Contact Now</a>
-
-         	<div class="clearfix"></div>
-
-         </div>
-
-
-
-     	<div class="clearfix"></div>
-     </div>
-</div>';
-            }
-            else {
-
-                $string.=' <div class="item ">
-     <div class="team_block1row">
-       <div class="team_block1_left">
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; height:100%;">
+            $string.='<div class="row">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td align="center" valign="middle">
+  <td align="center" valign="middle">
+<div class="tblock_img"><img src="'.$postimg.'" /></div>
+</td>
 
-        <img src="'.$postimg.'" alt="teamimg1">
-        </td>
-  </tr>
+<td align="center" valign="middle">
+<div class="tblock_name">'.get_the_title().'</div>
+</td>
+
+<td align="center" valign="middle">
+<div class="tblock_des">'.$testimonialdescription[0].'</div>
+</td>
+
+</tr>
+
 </table>
 
-        </div>
+<div class="clearfix"></div>
+</div> ';
 
-         <div class="team_block1_right">
-          <h2>'. get_the_title() .'</h2>
-          <h3>'.$designation[0].'</h3>
-
-          <h4>'.$descval[0].'</h4>
-
-         		<a class="team_block1btn" href="/contact">Contact Now</a>
-
-         	<div class="clearfix"></div>
-
-         </div>
-
-
-
-     	<div class="clearfix"></div>
-     </div>
-</div>';
-
-            }
-            $i++;
 
 
 
@@ -348,7 +171,7 @@ function wp_teamslider() {
         // no posts found
     }
 
-    $string .= '</div></div></div>';
+    $string .= '';
 
     return $string;
 
@@ -356,49 +179,55 @@ function wp_teamslider() {
     wp_reset_postdata();
 }
 // Add a shortcode
-add_shortcode('teamlistslider', 'wp_teamslider');
-
-// Enable shortcodes in text widgets
-add_filter('widget_text', 'do_shortcode');
+add_shortcode('testimoniallist', 'wp_testimoniallist');
 
 
-
-
-// team page bottom contain
-
-
-
-function wp_teamlist() {
+function wp_hometestimoniallist() {
 // the query
-    $the_query = new WP_Query( array( 'category_name' => 'team', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
+    $the_query = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 50 ,'order'=>'DESC','orderby'=>'date' ) );
     $string='';
+    // indicator manage
+    $slideIndexStr='';
+    $slideIndex=0;
     $i=0;
 // The Loop
     if ( $the_query->have_posts() ) {
-        $string .= '<div class="container-fluid team_block2">';
+        $string .= '<div class="item active">';
+        $slideIndexStr .= '<li data-target="#myhometestiCarousel" data-slide-to="'.$slideIndex.'" class="active"></li>';
         while ( $the_query->have_posts() ) {
-
             $the_query->the_post();
-            //var_dump( get_the_ID()); exit;
+            //var_dump( get_the_ID()); //exit;
 
-            $descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
+            if($i%2 == 0 && $i >0){
+                $string .= '</div><div class="item">';
+                $slideIndexStr .= '<li data-target="#myhometestiCarousel" data-slide-to="'.++$slideIndex.'"></li>';
+            }
+
+
+            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
             $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
             $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
             $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
             $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
-            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);
+            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
 
             //print_r($fb);
-            if($fb[0]==''){
-                $fb[0]='#';
-            }
-            if($twitter[0]==''){
-                $twitter[0]='#';
-            }
-            if($instagram[0]==''){
-                $instagram[0]='#';
-            }
 
+
+//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+//            //print_r($pic);
+//            //print_r($postimg);
+//            if($postimg== NULL){
+//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
+//
+//            }
+//            else $postimg="/wp-content/uploads/".$postimg;
+
+
+
+            $testimonialdescription=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_4_numInSet_0']);
+            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_1_numInSet_0']);
+            //var_dump($pic);
             $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
             //print_r($pic);
             //print_r($postimg);
@@ -407,75 +236,130 @@ function wp_teamlist() {
 
             }
             else $postimg="/wp-content/uploads/".$postimg;
-            //var_dump(get_post_meta( 424 ));
-
-            /*echo '<pre>';
-            print_r($postimg);
-            echo '</pre>';*/
-            //$string .= '<ul class="postsbycategory widget_recent_entries">';
-            //$the_query->the_post();
-
-            // if no featured image is found
-            /* $string .= '
-                 <li class="contentc"> <h2><div class="contentcimgwrapper"><img src='.$postimg.' /></div>
-                 <div class="titleb"><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></div>
-                 ' . wp_trim_words(get_the_content(),100) .'</h2><div class="clear"></div></li>';*/
-            /* $string .='<div class="block2rightconbox">
-             <div class="blogimghome">
- <img class="block2rightcarimg" src="'.$postimg.'" /></div>
- <h2>'.wp_trim_words(get_the_title(),50).'</h2>
- <p><span class="homeblockdate">'.get_the_date().'</span></p>
- <p>' . wp_trim_words(get_the_content(),80) .'</p>
- <p><a class="homeblocklinksml" href="'.get_the_permalink().'">Read More</a></p>
- </div>';*/
 
 
-                /*$string.=' <div class="item active">
-     <div class="team_block1row">
-       <div class="team_block1_left">  <img src="'.$postimg.'" alt="teamimg1"></div>
-
-         <div class="team_block1_right">
-          <h2>'. get_the_title() .'</h2>
-          <h3>'.$designation[0].'</h3>
-
-          <h4>'.$descval[0].'</h4>
+            $string.='<div class="hometestimonialblockcontent">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6"><h4>Task</h4></div>
+                                        <div class="col-md-6"><span><h4>'.get_the_title().'</h4></span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><h4>Review</h4></div>
+                                        <div class="col-md-6"><span>'.$testimonialdescription[0].'</span></div>
+                                    </div>
+                                </div>
+                            </div>';
 
 
 
-         		<a class="team_block1btn" href="/contact">Contact Now</a>
 
-         	<div class="clearfix"></div>
+            /* $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
+             <div class="bottomsharethis">
+             <span class="st_sharethis_large" displayText="ShareThis"></span>
+             <div class="mapost_link_sharethise" >
+                                  <span class="st_facebook_large" displayText="Facebook"></span>
+                                  <span class="st_twitter_large" displayText="Tweet"></span>
+                                  <span class="st_linkedin_large" displayText="LinkedIn"></span>
+                                  <span class="st_pinterest_large" displayText="Pinterest"></span>
+                                  <span class="st_email_large" displayText="Email"></span>
+                             </div>
+             <div class="mapost_date">'.get_the_date().'</div>
+             </div>
 
-         </div>
+             ';*/
+            //$string .= '</ul>';
+
+            $i++;
+
+        }
 
 
 
-     	<div class="clearfix"></div>
-     </div>
-</div>';*/
+    } else {
+        // no posts found
+
+    }
+
+    $string .= '</div>';
+//$string = 'koushik';
 
 
-            $string.=' <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 teamblock_con">
- <div class="teamblock_con_top"></div>
+    $newString = '<ol class="carousel-indicators">'.$slideIndexStr.'</ol>';
+    $newString .= '<div class="carousel-inner" role="listbox">'.$string.'</div>';
 
- <div class="teamblock_con_main">
 
- <h2>'. get_the_title() .'</h2>
- <div class="teamimg">
-   <img src="'.$postimg.'">
+    return $newString;
+
+    /* Restore original Post Data */
+    wp_reset_postdata();
+}
+// Add a shortcode
+add_shortcode('hometestimoniallist', 'wp_hometestimoniallist');
+
+
+function wp_bloglist() {
+// the query
+    $the_query = new WP_Query( array( 'post_type' => 'blog', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
+    $string='';
+    $i=0;
+// The Loop
+    if ( $the_query->have_posts() ) {
+        $string .= '';
+        while ( $the_query->have_posts() ) {
+
+            $the_query->the_post();
+            //var_dump( get_the_ID()); //exit;
+
+            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
+            $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
+            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
+            $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
+            $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
+            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
+
+            //print_r($fb);
+
+
+//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+//            print_r($pic);
+//            print_r($postimg);
+//            if($postimg== NULL){
+//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
+//
+//            }
+//            else $postimg="/wp-content/uploads/".$postimg;
+
+
+
+            $testimonialdescription=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0']);
+
+            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0']);
+            //var_dump($pic);
+            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+            //print_r($pic);
+            //print_r($postimg);
+            if($postimg== NULL){
+                $postimg='/wp-content/themes/kfranceaccountingservices/images/bannerlogo.png';
+
+            }
+            else $postimg="/wp-content/uploads/".$postimg;
+
+
+            $string.='<div class="container blog_box"><div class="blogWrapper"><img src="'.$postimg.'" /> </div>
+ <div class="blogdate">
+ <span>'.date('M j, Y',strtotime(get_the_date())).'</span>
+ </div> 
+ <div class="blogdes">
+ 
+ <h2>'.get_the_title().'</h2>
+ 
+ <h3>'. wp_trim_words(get_the_content(),100) .'</h3> 
+ <a class="readmore" href="/blog-details?id='.get_the_ID().'&title='.get_the_title().'">Read More <span>&#8594;</span></a> 
  </div>
- <p>'.$designation[0].'</p>
-  <!--<div class="sociallinks">
-
-    	 <a target="_blank" href="'.$fb[0].'" >  <img src="../wp-content/themes/pearlhealth/images/icon_f.png"></a>
-     <a target="_blank" href="'.$twitter[0].'">  <img src="../wp-content/themes/pearlhealth/images/icon_t.png"></a>
-      	<a target="_blank" href="'.$instagram[0].'">   <img src="../wp-content/themes/pearlhealth/images/icon_i.png"></a>
-
- </div>-->
-
- <a class="btn btn-default btnmore btnblue">View Bio</a>
- </div>
- </div>';
+ 
+<div class="clearfix"></div>
+</div>';
 
 
 
@@ -501,7 +385,7 @@ function wp_teamlist() {
         // no posts found
     }
 
-    $string .= '<div class="clearfix"></div></div>';
+    $string .= '';
 
     return $string;
 
@@ -509,7 +393,113 @@ function wp_teamlist() {
     wp_reset_postdata();
 }
 // Add a shortcode
-add_shortcode('teamlist', 'wp_teamlist');
+add_shortcode('bloglist', 'wp_bloglist');
+
+
+function wp_blogdetail(){
+
+    //var_dump($_REQUEST['id']);
+    //echo 9878778;
+
+   // $the_query = new WP_Query( array( 'post_id'=>@$_REQUEST['id'] ,'post_type' => 'blog', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date') );
+    //
+    $the_query = get_post($_REQUEST['id']);
+    $string='';
+    //var_dump($the_query);
+    $i=0;
+// The Loop
+    //if ( $the_query->have_posts() ) {
+        $string .= '';
+       // while ( $the_query->have_posts() ) {
+
+           // $the_query->the_post();
+            //var_dump( get_the_ID()); //exit;
+
+            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
+            $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
+            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
+            $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
+            $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
+            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
+
+            //print_r($fb);
+
+
+//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+//            print_r($pic);
+//            print_r($postimg);
+//            if($postimg== NULL){
+//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
+//
+//            }
+//            else $postimg="/wp-content/uploads/".$postimg;
+
+
+
+            $testimonialdescription=(get_post_meta($_REQUEST['id'] )['_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0']);
+
+            $pic=(get_post_meta($_REQUEST['id'] )['_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0']);
+            //var_dump($pic);
+            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
+            //print_r($pic);
+            //print_r($postimg);
+            if($postimg== NULL){
+                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
+
+            }
+            else $postimg="/wp-content/uploads/".$postimg;
+
+
+            $string.='<div class="container blog_box"><div class="blogWrapper"><img src="'.$postimg.'" /> </div>
+ <div class="blogdate">
+ <span>'.@date('M j, Y',strtotime(get_the_date())).'</span>
+ </div> 
+ <div class="blogdes">
+ 
+ <h2>'.@get_the_title().'</h2>
+ 
+ <h3>'. @wp_trim_words(get_the_content(),100) .'</h3> 
+ <a class="readmore" href="/blog-details?id='.get_the_ID().'&title='.get_the_title().'">Read More <span>&#8594;</span></a> 
+ </div>
+ 
+<div class="clearfix"></div>
+</div>';
+
+
+
+
+            /* $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
+             <div class="bottomsharethis">
+             <span class="st_sharethis_large" displayText="ShareThis"></span>
+             <div class="mapost_link_sharethise" >
+                                  <span class="st_facebook_large" displayText="Facebook"></span>
+                                  <span class="st_twitter_large" displayText="Tweet"></span>
+                                  <span class="st_linkedin_large" displayText="LinkedIn"></span>
+                                  <span class="st_pinterest_large" displayText="Pinterest"></span>
+                                  <span class="st_email_large" displayText="Email"></span>
+                             </div>
+             <div class="mapost_date">'.get_the_date().'</div>
+             </div>
+
+             ';*/
+            //$string .= '</ul>';
+
+      //  }
+   // } else {
+        // no posts found
+   // }
+
+    $string .= '';
+
+    return $string;
+
+    /* Restore original Post Data */
+    wp_reset_postdata();
+}
+
+// Add a shortcode
+add_shortcode('blogdetail', 'wp_blogdetail');
+
 
 // Enable shortcodes in text widgets
 add_filter('widget_text', 'do_shortcode');
