@@ -1,0 +1,151 @@
+@media(max-width:1660px) {
+
+.banner_img .banner_img_testimonials{margin-left:-200px;}
+}
+
+
+@media(max-width:1360px) {
+
+.banner_img .banner_img_testimonials{margin-left:-400px;}
+}
+
+@media(max-width:1260px) {
+.banner_img .banner_imgcon{ margin-left:-100px; display:block;}
+.banner_img .blog_banner_imgcon{ margin-left:-100px; display:block;}
+}
+
+@media(max-width:1199px) {
+.banner_logo{ position:inherit; left:0; top:0; background:#e6e6e6; width:auto; text-align:center; padding:10px;}
+.banner_logo img{ width:auto; max-width:90%;}
+
+.maininnerbanner .innerimgbanner {
+        margin-top: 0px;
+    }
+.banner_img .banner_imgcon{ margin-left:-360px; display:block;}	
+
+.banner_img .banner_img_testimonials{margin-left:-600px;}
+
+.testimonials_block .tblock_des{ width:500px;}
+
+.banner_img .blog_banner_imgcon{ margin-left:-360px; display:block;}	
+
+.blog_box .blogdes{ width:800px;}
+}
+
+
+
+
+
+@media(max-width:991px) {
+.contact_wrapper .contactleft{ text-align:center;}
+
+.contact_wrapper .contactleft h3:before{ margin:15px auto;}
+
+.contact_formcon .con_subbtn{ float:none; display:block; margin:0 auto; margin-top:15px;}
+
+.contact_wrapper .contactright h6{ text-align:center;}
+
+.contact_wrapper .contactright{ margin-top:50px;}
+
+.banner_img .banner_imgcon{margin-left:-450px!important; }
+
+.banner_img .blog_banner_imgcon{margin-left:-450px!important; }
+
+
+.banner_img .banner_img_testimonials{margin-left:-400px;}
+
+
+.testimonials_block{ width:94%; margin:0 auto;}
+
+.testimonials_block .row td{ display:block;}
+
+.testimonials_block .row .tblock_img{ float:none; margin:20px auto;}
+
+.testimonials_block .row .tblock_name{ border:none; border-top:solid 2px #e0e0e0; border-bottom:solid 2px #e0e0e0; width:100%; text-align:center; padding:8px;  }
+
+.testimonials_block .row:nth-child(odd) .tblock_name{border:none;   border-top:solid 2px #fff; border-bottom:solid 2px #c1c1c1; }
+
+.testimonials_block .tblock_des{ text-align:center; width:100%;}
+
+.inner_form_con{ background-image:none; padding-left:10px; padding-right:10px; width:auto;}
+
+.inner_form_con .inner_form_left{ text-align:center; padding:0;}
+
+.inner_form_con .inner_form_left h3:after{ display:block; margin:20px auto;}
+
+.inner_form_con .inner_form_right{ padding:20px 0 0 0; margin-top:20px; border:none; border-top:solid 1px #4a4a4a;}
+
+.inner_form_con .inner_form_right h5{ text-align:center;}
+
+.inner2_formcon .formcontrol{ width:100%; float:none}
+
+.inner2_formcon .formcontrol2 { width:100%; float:none;}
+
+.inner2_formcon .con_subbtn{ float:none; display:block; margin:0 auto; margin-top:21px;}
+
+.blog_box .blogdes{ width:580px;}
+}
+
+
+@media(max-width:860px) {
+.banner_img .banner_imgcon{margin-left:-650px!important; }
+
+.banner_img .blog_banner_imgcon{margin-left:-650px!important; }
+
+.banner_img .blog_banner_imgcon{margin-left:-800px!important; }
+}
+
+
+
+@media(max-width:768px) {
+.contact_wrapper{ padding-left:20px; padding-right:20px;}
+.banner_img .banner_img_testimonials{margin-left:-1000px;}
+
+.banner_img .blog_banner_imgcon{margin-left:-1000px!important; }
+
+.blog_box { width:96%; margin:0 auto; margin-bottom:25px; background-image:none;}
+
+.blog_box .blogdate{ width:100%; float:none; margin:0 auto; padding-top:20px; background: #fff url("../images/date_icon.png") no-repeat center bottom; padding-bottom:80px;}
+
+.blog_box .blogdes{ width:100%; float:none; text-align:center; border:none; padding:0px;}
+.blog_box .blogdes h2{ text-align:center;}
+
+.detailsharecon{ text-align:center; margin:0 auto; float:none;  margin-top:30px;}
+}
+
+
+@media(max-width:600px) {
+.banner_img .banner_imgcon{margin-left:-850px!important; }
+
+.banner_img .blog_banner_imgcon{margin-left:-1050px!important; }
+
+.banner_img .banner_img_testimonials{margin-left:-1200px;}
+
+
+.testimonials_wrapper h2{ font-size:40px;}
+
+.contact_wrapper h2{ font-size:40px;}
+
+.blog_wrapper h2{ font-size:40px;}
+.blog_box .blogdes h2{ font-size:30px;}
+}
+
+
+
+@media(max-width:400px) {
+.banner_img .banner_imgcon{margin-left:-920px!important; }
+
+.banner_img .blog_banner_imgcon{margin-left:-1200px!important; }
+
+.banner_img .banner_img_testimonials{margin-left:-1240px;}
+
+
+.testimonials_pagination{ width:262px; margin:28px auto; background:none;}
+
+.pagination > li > a, .pagination > li > span{ line-height: 33px!important;   padding: 0 8px!important;}
+}
+
+
+
+
+
