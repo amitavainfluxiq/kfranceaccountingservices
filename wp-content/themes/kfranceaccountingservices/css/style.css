@@ -110,6 +110,8 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 /*-------End TopMenu-----*/
 
 /*-------Banner-----*/
+
+/*-------img.img-responsive { display: table-cell; max-width: 100%; }----*/
 .mainbanner .imgbanner{margin-top: -89px; z-index: -1; position: relative;}
 .mainbanner .imgbanner {
 	width: 100%;

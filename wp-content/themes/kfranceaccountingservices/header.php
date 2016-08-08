@@ -74,7 +74,7 @@
               $ic=0;
               foreach ($pages as $page) :
 
-                  if($page->ID!=147){
+                  if($page->ID!=144 && $page->ID!=246){
 
 
                   $args2 = array(
@@ -87,6 +87,7 @@
 
                   );
                   $pages2 = get_pages($args2);
+
 
 
                   if ( is_page( $page->ID ) || $post->post_parent == $page->ID ) {
@@ -127,6 +128,9 @@
                   $ic++;
 
                   }
+
+
+
               endforeach;
 
           }

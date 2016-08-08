@@ -18,7 +18,7 @@
                     foreach ($pages as $page) :
 
 
-                        if($page->ID!=147){
+                        if($page->ID!=144 && $page->ID!=246){
 
                         $args2 = array(
                             'sort_column' => 'post_date',
@@ -66,7 +66,6 @@
 
                         $ic++;
                         }
-
 
                     endforeach;
                 }

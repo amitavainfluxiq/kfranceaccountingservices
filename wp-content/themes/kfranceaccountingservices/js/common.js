@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+/*
 $(".blogdes h3").each(function(i){
     len=$(this).text().length;
     if(len>360)
@@ -8,6 +9,7 @@ $(".blogdes h3").each(function(i){
       $(this).text($(this).text().substr(0,360)+' ... ');
     }
   });
+*/
 
 
 
@@ -26,7 +28,15 @@ $('.bannerarrowscroll').click(function () {
     );
 
 
+//Home Testimonial cHARACTER lIMIT
 
+    $(".hometestimonialblockcontent span").each(function(i){
+        len=$(this).text().length;
+        if(len>240)
+        {
+            $(this).text($(this).text().substr(0,240)+' ... ');
+        }
+    });
 
 
 });
