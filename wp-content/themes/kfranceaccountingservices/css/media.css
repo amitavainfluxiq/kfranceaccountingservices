@@ -80,6 +80,10 @@
         position: absolute;
         margin-left: 35%;
     }
+
+    .hometestimonialblockcontent {
+        width: 94%;
+    }
 }
 
 
@@ -337,6 +341,13 @@
         padding: 20px 0;
     }
     .homelogo .banner_logo{display: block;}
+    .homeblock4 .bannerbutton {
+        margin-top: 0px;
+    }
+    .hometestimonialbannerbutton {
+        padding: 20px 0px 20px;
+    }
+    #myhometestiCarousel br{display: none;}
 }
 
 @media(max-width:1024px) {
@@ -417,8 +428,7 @@
 }
 
 @media(max-width:767px) {
-
-    .mainbanner .imgbanner img {
+   .mainbanner .imgbanner img {
         margin-left: -310px;
     }
     .hometestimonialblock .carousel-indicators {

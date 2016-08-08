@@ -319,8 +319,8 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 	height: 100%;
 }
 .hometestimonialblock .carousel-indicators {
-	position: absolute;
-	bottom: 45%;
+
+	bottom: 46%;
 	right: 0%;
 	z-index: 15;
 	width: 2%;

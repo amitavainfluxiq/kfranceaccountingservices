@@ -80,12 +80,14 @@ function create_post_blog() {
 
 function wp_testimoniallist() {
 // the query
-    $the_query = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
+
+    global $paged;
+    $the_query = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 3 ,'order'=>'DESC','orderby'=>'date', 'paged' => $paged ) );
     $string='';
     $i=0;
 // The Loop
     if ( $the_query->have_posts() ) {
-        $string .= '';
+        $string .= ' <div class="testimonials_block_wrapper">';
         while ( $the_query->have_posts() ) {
 
             $the_query->the_post();
@@ -167,6 +169,18 @@ function wp_testimoniallist() {
             //$string .= '</ul>';
 
         }
+
+        $string .= '</div>';
+        $string.= '<div class="blogpagination">';
+        $big = 999999999; // need an unlikely integer
+        $string.= paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $the_query->max_num_pages //$q is your custom query
+        ) );
+        $string.= '</div>';
+
     } else {
         // no posts found
     }
@@ -204,27 +218,6 @@ function wp_hometestimoniallist() {
             }
 
 
-            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
-            $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
-            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
-            $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
-            $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
-            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
-
-            //print_r($fb);
-
-
-//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
-//            //print_r($pic);
-//            //print_r($postimg);
-//            if($postimg== NULL){
-//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
-//
-//            }
-//            else $postimg="/wp-content/uploads/".$postimg;
-
-
-
             $testimonialdescription=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_4_numInSet_0']);
             $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_4_fieldID_1_numInSet_0']);
             //var_dump($pic);
@@ -254,21 +247,7 @@ function wp_hometestimoniallist() {
 
 
 
-            /* $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
-             <div class="bottomsharethis">
-             <span class="st_sharethis_large" displayText="ShareThis"></span>
-             <div class="mapost_link_sharethise" >
-                                  <span class="st_facebook_large" displayText="Facebook"></span>
-                                  <span class="st_twitter_large" displayText="Tweet"></span>
-                                  <span class="st_linkedin_large" displayText="LinkedIn"></span>
-                                  <span class="st_pinterest_large" displayText="Pinterest"></span>
-                                  <span class="st_email_large" displayText="Email"></span>
-                             </div>
-             <div class="mapost_date">'.get_the_date().'</div>
-             </div>
 
-             ';*/
-            //$string .= '</ul>';
 
             $i++;
 
@@ -300,7 +279,8 @@ add_shortcode('hometestimoniallist', 'wp_hometestimoniallist');
 
 function wp_bloglist() {
 // the query
-    $the_query = new WP_Query( array( 'post_type' => 'blog', 'posts_per_page' => 300 ,'order'=>'DESC','orderby'=>'date' ) );
+    global $paged;
+    $the_query = new WP_Query( array( 'post_type' => 'blog', 'posts_per_page' => 3 ,'order'=>'DESC','orderby'=>'date' , 'paged' => $paged ) );
     $string='';
     $i=0;
 // The Loop
@@ -309,28 +289,6 @@ function wp_bloglist() {
         while ( $the_query->have_posts() ) {
 
             $the_query->the_post();
-            //var_dump( get_the_ID()); //exit;
-
-            /*$descval=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_2_numInSet_0']);
-            $designation=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_1_numInSet_0']);
-            $pic=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_3_numInSet_0']);
-            $fb=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_4_numInSet_0']);
-            $twitter=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_5_numInSet_0']);
-            $instagram=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_3_fieldID_6_numInSet_0']);*/
-
-            //print_r($fb);
-
-
-//            $postimg=(get_post_meta( intval($pic[0]) )['_wp_attached_file'][0]);
-//            print_r($pic);
-//            print_r($postimg);
-//            if($postimg== NULL){
-//                $postimg='/wp-content/themes/pearlhealth/images/team_demo_logo.png';
-//
-//            }
-//            else $postimg="/wp-content/uploads/".$postimg;
-
-
 
             $testimonialdescription=(get_post_meta( get_the_ID() )['_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0']);
 
@@ -362,25 +320,17 @@ function wp_bloglist() {
 </div>';
 
 
-
-
-            /* $string .= '<a href='. get_the_permalink() .' class="blogreadmore">Read More</a>
-             <div class="bottomsharethis">
-             <span class="st_sharethis_large" displayText="ShareThis"></span>
-             <div class="mapost_link_sharethise" >
-                                  <span class="st_facebook_large" displayText="Facebook"></span>
-                                  <span class="st_twitter_large" displayText="Tweet"></span>
-                                  <span class="st_linkedin_large" displayText="LinkedIn"></span>
-                                  <span class="st_pinterest_large" displayText="Pinterest"></span>
-                                  <span class="st_email_large" displayText="Email"></span>
-                             </div>
-             <div class="mapost_date">'.get_the_date().'</div>
-             </div>
-
-             ';*/
-            //$string .= '</ul>';
-
         }
+
+        $string.= '<div class="blogpagination">';
+        $big = 999999999; // need an unlikely integer
+        $string.= paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $the_query->max_num_pages //$q is your custom query
+        ) );
+        $string.= '</div>';
     } else {
         // no posts found
     }

@@ -1,6 +1,6 @@
 .contact_wrapper{ padding:38px 0;}
 
-.contact_wrapper h2{ margin:0; padding:0 0 38px 0; font-family: 'PTSansBold'; font-size:60px; color:#fff; text-align:center; text-transform:uppercase;}
+.contact_wrapper h2{ margin:0; padding:0 0 38px 0; font-family: 'PTSansBold'; font-size:60px; color:#019acf; text-align:center; text-transform:uppercase;}
 
 .contact_wrapper .contactleft img{ max-width:100%;}
 
@@ -80,10 +80,13 @@ color:#696565; opacity:1;
 .testimonials_wrapper h2{ margin:0; padding:0 0 40px 0; font-family: 'PTSansBold'; font-size:60px; color:#019acf; text-align:center; text-transform:uppercase;}
 
 
-.testimonials_block{ background:#ffffff; padding:10px;}
+.testimonials_block{padding:21px 0 10px 0px;}
 
 .testimonials_block .row:nth-child(odd){background:#eae8e8;}
-
+.testimonials_block_wrapper {
+    background: #ffffff none repeat scroll 0 0;
+    padding: 10px; margin-bottom: 25px;
+}
 
 
 
@@ -132,8 +135,8 @@ color:#696565; opacity:1;
 
 .inner_form_con{  background: #568dbc url("../images/innercon_bg.jpg") no-repeat left top; padding:20px 0 25px 0; background-size:cover;}
 
-.inner_form_con h2{ text-align:center;  font-family: "PTSansBold";
-    font-size: 60px; color:#fff; margin:0; padding:0 0 21px 0;} 
+.inner_form_con h2, .blog_wrapper .inner_form_con h2{ text-align:center;  font-family: "PTSansBold";
+    font-size: 60px; color:#fff !important; margin:0; padding:0 0 21px 0;}
 	
 .inner_form_con .inner_form_left{ padding-right:60px;}	
 	.inner_form_con .inner_form_left h3{font-family: 'PTSansBold'; font-size:30px; color:#fcf915; margin:0; padding:0;}
@@ -188,7 +191,7 @@ color:#4a4949; opacity:1;
 
 
 
-.inner2_formcon .con_subbtn{ width:211px; height:52px; background:#d8ff00; border:none; cursor:pointer; border-radius:5px; float:right; margin-top:21px; color:#000; font-size:18px;  text-transform:uppercase; letter-spacing:4px; font-family: 'PTSansBold'; line-height:50px;}
+.inner2_formcon .con_subbtn{ width:211px; height:52px; background:#d8ff00; border:none; cursor:pointer; border-radius:5px; float:right; margin-top:21px; color:#000; font-size:18px;  text-transform:uppercase; letter-spacing:4px; font-family: 'PTSansBold'; line-height:50px; margin-right: 2%;}
 
 
 
@@ -281,6 +284,29 @@ padding-bottom: 56.25%;
 .detailsharecon  img{ float:left; margin:0 4px;}
 
 
-.thankyou_wrapper{ padding:38px 0 38px 0; width:100%;}
+.thankyou_wrapper{ padding:48px 0; width:100%;}
 .thankyou_wrapper h2{ margin:0; padding:0 0 19px 0; font-family: 'PTSansBold'; font-size:60px; color:#019acf; text-align:center; text-transform:uppercase;}
 .thankyou_wrapper p {font-size: 30px; color: #414040; font-family: 'PTSans'; text-align: center;}
+
+
+.blogpagination{ padding: 10px 0 21px 0; width:100%;text-align: center;}
+.blogpagination .prev{border: none; border-radius: 0px; background-color: #019acf !important; color: #fff !important; text-indent: -9999999px; background: url(../images/prev.png) no-repeat center center; background-size: 16px; font-size: 0px !important;}
+.blogpagination .next{border: none;
+    border-radius: 0px;
+    background-color: #019acf !important;
+    color: #fff !important;text-indent: -9999999px; font-size: 0px !important; background: url(../images/next.png) no-repeat center; background-size: 16px;}
+
+.blogpagination .page-numbers{border: none;
+    border-radius: 0px;
+    font-family: 'PTSans';
+    font-size: 20px;
+    color: #5c5c5c;
+    line-height: 15px !important;
+    padding: 12px !important;}
+
+.blogpagination .current{color:#019acf !important;}
+.blogpagination a{display: inline-block;
+    line-height: 33px !important;
+    height: 16px;}
+
+
