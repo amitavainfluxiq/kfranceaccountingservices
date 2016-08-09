@@ -1,5 +1,7 @@
 @media(max-width:1920px) {
-
+    .hometestimonialbannerbutton {
+        margin-right: 330px;
+    }
 }
 
 @media(max-width:1680px) {
@@ -15,9 +17,12 @@
     .homeblock3content p span {
         margin-left: 0%;
     }
-
+    .hometestimonialbannerbutton {
+        margin-right: 168px;
+    }
 
 }
+
 
 
 
@@ -27,17 +32,28 @@
 
 
 @media(max-width:1660px) {
+    .hometestimonialbannerbutton {
+        margin-right: 205px;
+    }
 }
 
 @media(max-width:1600px) {
-
+    .hometestimonialbannerbutton {
+        margin-right: 183px;
+    }
 }
 
 @media(max-width:1550px) {
-
+    .hometestimonialbannerbutton {
+        margin-right: 156px;
+    }
 }
 
-
+@media(max-width:1500px) {
+    .hometestimonialbannerbutton {
+        margin-right: 128px;
+    }
+}
 
 @media(max-width:1400px) {
     .bannercontent {
@@ -57,8 +73,17 @@
 }
 
 
+@media(max-width:1366px) {
+    .hometestimonialbannerbutton {
+        margin-right: 66px;
+    }
+}
+
 @media(max-width:1360px) {
 
+    .hometestimonialbannerbutton {
+        margin-right: 60px;
+    }
 
 }
 
@@ -83,6 +108,9 @@
 
     .hometestimonialblockcontent {
         width: 94%;
+    }
+    .hometestimonialbannerbutton {
+        margin-right: 16px;
     }
 }
 
@@ -303,6 +331,7 @@
     }
     .overlaybluebg {
         position: relative;
+        padding-bottom: 20px;
     }
     .homeblock3 .bannerbutton {
         margin-top: 20px;
@@ -348,6 +377,9 @@
         padding: 20px 0px 20px;
     }
     #myhometestiCarousel br{display: none;}
+    .hometestimonialblock .carousel-indicators {
+        bottom: 36%;
+    }
 }
 
 @media(max-width:1024px) {
@@ -370,6 +402,9 @@
         position: relative;
         top: 0;
         width: 100%;
+        height: auto;
+        float: left;
+        padding-bottom: 20px;
     }
     .homeblock4 {
         background: none;
@@ -420,6 +455,9 @@
 
 
 @media(max-width:960px) {
+    .hometestimonialblock .carousel-indicators {
+        bottom: 38%;
+    }
 }
 
 @media(max-width:800px) {
@@ -440,11 +478,20 @@
     .footersociallink span {
         line-height: 15px;
         margin-bottom: 20px;
-    }
+    }.hometestimonialblock .carousel-indicators {
+         bottom: 41%;
+     }
+
 }
 
 @media(max-width:700px) {
 
+}
+
+@media(max-width:600px) {
+    .hometestimonialblock .carousel-indicators {
+        bottom: 42%;
+    }
 }
 
 @media(max-width:560px) {
