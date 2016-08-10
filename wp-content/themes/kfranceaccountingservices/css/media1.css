@@ -1,12 +1,16 @@
 @media(max-width:1660px) {
 
 .banner_img .banner_img_testimonials{margin-left:-200px;}
+.banner_img .banner_img_thankyou{margin-left:-200px;}
+    .banner_logo .banner_logo_thankyou{margin-left: -138px;}
 }
 
 
 @media(max-width:1360px) {
 
 .banner_img .banner_img_testimonials{margin-left:-400px;}
+    .banner_img .banner_img_thankyou{margin-left:-400px;}
+    .banner_logo .banner_logo_thankyou{margin-left: -264px;}
 }
 
 @media(max-width:1260px) {
@@ -21,15 +25,22 @@
 .maininnerbanner .innerimgbanner {
         margin-top: 0px;
     }
+
 .banner_img .banner_imgcon{ margin-left:-360px; display:block;}	
 
 .banner_img .banner_img_testimonials{margin-left:-600px;}
+    .banner_img .banner_img_thankyou{margin-left:-600px;}
+    .banner_logo .banner_logo_thankyou {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 .testimonials_block .tblock_des{ width:500px;}
 
 .banner_img .blog_banner_imgcon{ margin-left:-360px; display:block;}	
 
 .blog_box .blogdes{ width:800px;}
+
 }
 
 
@@ -53,6 +64,7 @@
 
 
 .banner_img .banner_img_testimonials{margin-left:-400px;}
+    .banner_img .banner_img_thankyou{margin-left:-400px;}
 
 
 .testimonials_block{ width:94%; margin:0 auto;}
@@ -100,6 +112,7 @@
 @media(max-width:768px) {
 .contact_wrapper{ padding-left:20px; padding-right:20px;}
 .banner_img .banner_img_testimonials{margin-left:-1000px;}
+    .banner_img .banner_img_thankyou{margin-left:-1000px;}
 
 .banner_img .blog_banner_imgcon{margin-left:-1000px!important; }
 
@@ -110,7 +123,7 @@
 .blog_box .blogdes{ width:100%; float:none; text-align:center; border:none; padding:0px;}
 .blog_box .blogdes h2{ text-align:center;}
 
-.detailsharecon{ text-align:center; margin:0 auto; float:none;  margin-top:30px;}
+.detailsharecon{ text-align:center; margin:10px auto; float:none;  margin-top:0px;}
 }
 
 
@@ -120,6 +133,7 @@
 .banner_img .blog_banner_imgcon{margin-left:-1050px!important; }
 
 .banner_img .banner_img_testimonials{margin-left:-1200px;}
+    .banner_img .banner_img_thankyou{margin-left:-1200px;}
 
 
 .testimonials_wrapper h2{ font-size:40px;}
@@ -131,6 +145,14 @@
 }
 
 
+@media(max-width:480px) {
+    .thankyou_wrapper p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 @media(max-width:400px) {
 .banner_img .banner_imgcon{margin-left:-920px!important; }
@@ -138,7 +160,7 @@
 .banner_img .blog_banner_imgcon{margin-left:-1200px!important; }
 
 .banner_img .banner_img_testimonials{margin-left:-1240px;}
-
+    .banner_img .banner_img_thankyou{margin-left:-1240px;}
 
 .testimonials_pagination{ width:262px; margin:28px auto; background:none;}
 

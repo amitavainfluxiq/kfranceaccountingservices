@@ -18,7 +18,7 @@
                     foreach ($pages as $page) :
 
 
-                        if($page->ID!=147){
+                        if($page->ID!=144 && $page->ID!=246){
 
                         $args2 = array(
                             'sort_column' => 'post_date',
@@ -67,7 +67,6 @@
                         $ic++;
                         }
 
-
                     endforeach;
                 }
                 ?>
@@ -86,4 +85,23 @@
             <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/fticon-linkedin.png" alt="linkedin"></a>
         </div>
         <div class="clearfix"></div>
+    <button type="button" class="btn btn-info btn-lg btnthankyoupop" data-toggle="modal" data-target="#popthankyou">Th you</button>
+    <!-- Modal -->
+    <div id="popthankyou" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body text-center thankyoucontent">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="logoimg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/homebannerlogo.png" alt="logo">
+                    </div>
+                    <p>Thank You For Contacting <span>K. France Accounting Services</span>. A member of our team will get back to you shortly</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
