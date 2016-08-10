@@ -172,8 +172,8 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 .homeblock1 h2 {margin: 0; padding: 0 0 24px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #000000; text-align: center; text-transform: uppercase;}
 .homeblock1 .headingborder{width:75px; background-color:#019acf; height: 3px; margin-right: auto; margin-left: auto; text-align: center; float: none;margin-bottom: 30px;}
 .homeblock1 .aboutcontent img{float:left; margin-right: 30px; margin-bottom: 10px; }
-.homeblock1 p {font-family: 'PTSans'; margin: 0; padding: 0 0 13px 0; font-size: 18px; line-height: 26px; color: #323232;}
-.homeblock1 .aboutcontent span{color: #019acf; font-family: 'PTSansBold';line-height: 26px;font-size: 24px;}
+.homeblock1 p {font-family: 'PTSans'; margin: 0; padding: 0 0 0px 0; font-size: 18px; line-height: 26px; color: #323232;}
+.homeblock1 .aboutcontent span{color: #019acf; font-family: 'PTSansBold';line-height: 26px;font-size: 24px; padding-bottom: 13px; display: block;}
 
 
 .homeblock2{background-color: #f2f2f2; width:100%; height: auto; border-top:1px solid #e8e7e7;padding: 39px 0;}
@@ -185,11 +185,7 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 .singleservice:nth-child(2){border-top:0px solid #b2b3b3;border-left:0px solid #b2b3b3;border-right:0px solid #b2b3b3;}
 .singleservice:nth-child(3) {
 	background: url("../images/linetop.png") no-repeat scroll left bottom, rgba(0, 0, 0, 0) url("../images/lineright.png") no-repeat scroll left bottom;
-	border-color: #b2b3b3 #b2b3b3 -moz-use-text-color;
-	border-style: solid solid none;
-	border-width: 0;
-	margin-top: 0px;
-}
+	border-color: #b2b3b3 #b2b3b3 -moz-use-text-color; border-style: solid solid none;border-width: 0;margin-top: 0px;}
 .singleservice:nth-child(4){border-left:0px solid #b2b3b3; border-top:0px; border-bottom:0px; background: url(../images/lineleft.png) no-repeat bottom; border-bottom:0px; margin-top: 0px;}
 .singleservice:nth-child(5){border-left: 0 solid #b2b3b3;	border-right: 0 solid #b2b3b3;
 	border-top: 0 none;}
@@ -289,7 +285,7 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 .homeblock4 {
 	background:url('../images/homeblock4bg.jpg');
 	position: relative;
-	min-height:875px;
+	min-height:752px;
 	width:auto;
 	background-size: cover;
 }
@@ -301,19 +297,19 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 	font-family: "PTSansBold";
 	font-size: 18px;
 	margin-right: 0px;
-	padding-bottom: 15px;
+	padding-bottom: 0px;
 	padding-top: 0px;
 	text-align: center;
 	text-transform: uppercase;
 	width: 212px;
 	letter-spacing: 2px;
 	background-color: transparent;
-	margin-top: 15px;
+	margin-top: 0px;
 }
 .homeblock4 .bannerbutton br{display: none;}
 
 .hometestimonialbannerbutton {
-	padding: 10px 0px;
+	padding: 35px 0px;
 	max-width: 100%;
 }
 .overlaybluebg {
@@ -353,7 +349,7 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 	background-color: #fff;
 }
 
-.homeblock4 h2 {margin: 0; padding: 39px 0 0px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #d8ff00; text-align: center; text-transform: uppercase;}
+.homeblock4 h2 {margin: 0; padding: 40px 0 0px 0;  font-family: 'PTSansBold';  font-size: 60px; color: #d8ff00; text-align: center; text-transform: uppercase;}
 
 
 .hometestimonialblockcontent{    border-bottom: 1px solid #fff;
@@ -370,12 +366,12 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 
 
 
-.homeblock5{padding: 50px 0px;}
+.homeblock5{padding: 43px 0px 50px;}
 .homeblock5content{max-width: 1120px; margin-left: auto; margin-right: auto;}
 .homeblock5content h3{margin: 0; padding: 0px;  font-family: 'PTSansBold';  font-size: 36px; color: #818287; text-align: center;  line-height: 46px; }
 
 /*-------Footer-----*/
-.footerblock{ background: #f0f0f0; padding: 20px 0; height: auto;}
+.footerblock{ background: #f0f0f0; padding: 20px 0; height: auto;display: block;}
 .footermenu{ padding: 0; max-width: 770px; float: left;}
 .footermenu ul{ margin: 0; padding: 0;}
 .footermenu ul li{ float: left; position:relative;}
@@ -396,7 +392,7 @@ a:focus {text-decoration:none;outline:none; cursor: pointer;}
 .footersociallink a:hover{background-position:left top;}
 
 #myhometestiCarousel ol{display: none;}
-
+#myhometestiCarousel br{display: none;}
 .thankyoucontent p{color: #fff;
 	font-family: 'PTSans';
 	font-size: 24px;

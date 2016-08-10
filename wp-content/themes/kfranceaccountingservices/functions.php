@@ -277,7 +277,7 @@ function wp_hometestimoniallist() {
 add_shortcode('hometestimoniallist', 'wp_hometestimoniallist');
 
 
-function wp_bloglist() {
+function wp_blog() {
 // the query
     global $paged;
     $the_query = new WP_Query( array( 'post_type' => 'blog', 'posts_per_page' => 3 ,'order'=>'DESC','orderby'=>'date' , 'paged' => $paged ) );
@@ -343,7 +343,7 @@ function wp_bloglist() {
     wp_reset_postdata();
 }
 // Add a shortcode
-add_shortcode('bloglist', 'wp_bloglist');
+add_shortcode('blog', 'wp_blog');
 
 
 function wp_blogdetail(){
