@@ -2,24 +2,42 @@
     .hometestimonialbannerbutton {
         margin-right: 330px;
     }
+    .homeblock3 p {
+        margin-top: 2%;
+        width: 846px;
+    }
 }
+
+@media(max-width:1860px) {
+    .homeblock3 {
+        background-position: -56px 32px;
+    }
+}
+
+@media(max-width:1800px) {
+
+}
+
 
 @media(max-width:1680px) {
     .homeblock3 p {
-        margin-top: 1%;
-        max-width: 625px;
+        width: 822px;
     }
     .homeblock3content {
         position: absolute;
-        margin-left: 50%;
-        padding-top: 3%;
+        margin-left: 34%;
+        padding-top: 7%;
     }
     .homeblock3content p span {
-        margin-left: 0%;
+        margin-left: 8%;
     }
     .hometestimonialbannerbutton {
         margin-right: 168px;
     }
+    .homeblock3 {
+        background-position: -168px 32px;
+    }
+
 
 }
 
@@ -27,6 +45,9 @@
 
 
 @media(max-width:1660px) {
+    .homeblock3 {
+        background-position: -205px 32px;
+    }
 
 }
 
@@ -47,11 +68,35 @@
     .hometestimonialbannerbutton {
         margin-right: 156px;
     }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 35%;
+        padding-top: 7%;
+    }
 }
 
 @media(max-width:1500px) {
     .hometestimonialbannerbutton {
         margin-right: 128px;
+    }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 35%;
+        padding-top: 7%;
+    }
+}
+
+@media(max-width:1440px) {
+    .homeblock3 {
+        background-position: -310px 32px;
+    }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 32%;
+        padding-top: 7%;
+    }
+    .homeblock3 p {
+        width: 782px;
     }
 }
 
@@ -63,11 +108,18 @@
         margin-left: -200px;
     }
     .homeblock3 {
-        background-position: -124px 32px;
+        background-position: -320px 32px;
+    }
+     .homelogo .banner_logo {
+        left: 882px;
     }
     .homeblock3 p {
-        margin-top: 1%;
-        max-width: 580px;
+        width: 770px;
+    }
+    .homeblock3content {
+        position: absolute;
+        margin-left: 31%;
+        padding-top: 7%;
     }
 
 }
@@ -77,6 +129,9 @@
     .hometestimonialbannerbutton {
         margin-right: 66px;
     }
+    .homeblock3 p {
+        margin-left: 16%;
+    }
 }
 
 @media(max-width:1360px) {
@@ -85,8 +140,27 @@
         margin-right: 60px;
     }
 
+    .homeblock3content p span {
+        margin-left: 5%;
+    }
+
 }
 
+@media(max-width:1300px) {
+
+    .homeblock3 p {
+        width: 734px;
+        margin-left: 13% !important;
+    }
+
+    .homeblock3content p span {
+        margin-left: 1%;
+    }
+
+    .homeblock3 {
+        background-position: -447px 32px !important;
+    }
+}
 
 
 
@@ -94,16 +168,18 @@
 @media(max-width:1280px) {
 
     .homeblock3 p {
-        margin-top: 1%;
-        max-width: 600px;
+        width: 734px;
+        margin-left: 13% !important;
     }
-
+    .homeblock3content p span {
+        margin-left: 1%;
+    }
     .homeblock3 {
-        background-position: -250px 10px;
+        background-position: -484px 32px !important;
     }
     .homeblock3content {
         position: absolute;
-        margin-left: 35%;
+        margin-left: 28%;
     }
 
     .hometestimonialblockcontent {
@@ -112,29 +188,26 @@
     .hometestimonialbannerbutton {
         margin-right: 16px;
     }
-}
-
-
-
-
-
-
-
-
-
-@media(max-width:1540px) {
-
-
-}
-
-@media(max-width:1380px) {
+    .homelogo .banner_logo {
+        left: 852px;
+    }
 
 }
 
 
+@media(max-width:1200px) {
+    .homeblock3 {
+        background-position: -430px 32px;
+    }
+    .homeblock3 p {
+        width: 715px;
+    }
+}
 
 @media(max-width:1199px) {
-
+    .homeblock3 {
+        background-position: 0px 32px !important;
+    }
     .homeblock4 .bannerbutton{ margin-top: 4px;}
     .location{margin-bottom: 15px; margin-top: 0px;}
     .location img{display: block; float: none; text-align: center; margin-left: auto; margin-right: auto;margin-bottom: 5px;}
@@ -204,6 +277,12 @@
     }
     .mainbanner .imgbanner {
         margin-top: 0px;
+    }
+    .homelogo .banner_logo {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
     }
     .bannercontent {
         position: relative;
@@ -298,10 +377,9 @@
         padding-top: 15px;
     }
     .homeblock3 p {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1%;
-        max-width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90% !important;
     }
     .hometestimonialblockcontent {
         border-bottom: 1px solid #fff;
@@ -485,8 +563,12 @@
 }
 
 @media(max-width:700px) {
-
+    .homeblock3 {
+        background-position: -114px 32px !important;
+    }
 }
+
+
 
 @media(max-width:600px) {
     .hometestimonialblock .carousel-indicators {
@@ -511,6 +593,9 @@
         margin-right: auto;
         display: block;
     }
+    .homeblock3 {
+        background-position: -234px 32px !important;
+    }
 }
 
 
@@ -529,6 +614,9 @@
     }
     .homeblock3 {
         background-position: -296px 32px;
+    }
+    .homeblock3 {
+        background-position: -327px 32px !important;
     }
 
 }

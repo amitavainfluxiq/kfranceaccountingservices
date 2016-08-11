@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 location">
                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-location.png" alt="location">
-                        <p>26151A VIA CALIFORNIA, CAPISTRANO BEACH, CA  92624</p>
+                        <p>34281 Doheny Park Road, #2712, Capistrano Beach, CA 92624</p>
                     </div>
                     <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 call">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icon-call.png" alt="call">

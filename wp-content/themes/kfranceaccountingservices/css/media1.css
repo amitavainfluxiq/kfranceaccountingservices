@@ -48,6 +48,9 @@
 
 
 @media(max-width:991px) {
+    .inner_form_con .inner_form_left h3 {
+        margin-top: 0px;
+    }
 .contact_wrapper .contactleft{ text-align:center;}
 
 .contact_wrapper .contactleft h3:before{ margin:15px auto;}
